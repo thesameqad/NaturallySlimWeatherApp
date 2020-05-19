@@ -34,7 +34,6 @@ function getPostfixFileName(iconNumber, isDay)
 } 
 export function getFileNameForIcon(icon)
 {
-    console.log(icon);
     const iconNumber = icon.substr(0,2);
     const dayPostfix = icon.substr(2);
     const dayNightMap = {
@@ -63,6 +62,5 @@ export function getFileNameForIcon(icon)
         'ic_snow.png': require('../../assets/images/ic_snow.png'),
         'ic_storm.png': require('../../assets/images/ic_storm.png'),
     };
-    console.log('fileName', fileName);
     return staticImageMap[fileName];
 }

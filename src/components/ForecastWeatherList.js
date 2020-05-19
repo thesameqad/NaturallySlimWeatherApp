@@ -16,7 +16,7 @@ const ForecastWeatherList = ({forecast, onShowDetails}) =>
                         (<TouchableHighlight onPress={() => onShowDetails(item)}>
                             <ForecastWeatherItem {...item} />
                         </TouchableHighlight>)}
-                    keyExtractor={(item) => {console.log("key",item); return item.id.toString();}}
+                    keyExtractor={(item) => {return item.id.toString();}}
                 />     
             </View>       
         </View>

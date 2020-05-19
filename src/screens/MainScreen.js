@@ -18,9 +18,7 @@ const MainScreen = (props) => {
         promises.push(openWeatherService.get5DaysWeather());
         axios.all(promises).then(axios.spread((...args) => {
             const todayResponse = args[0].data;
-            console.log("todayResponse", todayResponse);
             const fiveDaysResponse = args[1].data;
-            console.log("fiveDaysResponse", fiveDaysResponse);
             setTodayWeather({
                 curTemp: todayResponse.main.temp,
                 minTemp: todayResponse.main.temp_min,
@@ -64,7 +62,6 @@ const MainScreen = (props) => {
     }, []);
 
     const onShowDetails = (item) => {        
-        console.log("clicked",item);
         setSelectedDateItem(item);
     };
 

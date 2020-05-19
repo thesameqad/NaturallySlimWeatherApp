@@ -6,7 +6,6 @@ import { getFileNameForIcon } from '../shared/iconHelper';
 
 export default function ForecastWeatherItem(props) 
 {
-    console.log("item", props);
     return (
         <View style={styles.outerContainer}>
             <View style={styles.innerContainer}>
